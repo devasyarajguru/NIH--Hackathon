@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 *
 {
 
@@ -30,12 +33,17 @@ body
 {
  overflow: hidden;
   position: relative;
-  height: 100vh;
+  height:100vh;
 }
 
 .img-bg
 {
-  opacity: 0.6;
+    /* background: linear-gradient(
+        rgba(0, 0, 0, 0.1), 
+        rgb(0, 0, 0 , 0.1)
+      ); */
+  /* opacity: 0.9; */
+  /* filter: brightness(50%); */
   position: absolute;
   left: 0;
   top: 0;
@@ -43,22 +51,41 @@ body
   height: auto;
 }
 
+.overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.4); */
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgb(0, 0, 0 , 0.4)
+      );
+}
+
 .content
 {
     position: relative;
+    margin-top: -10px;
+
 }
 
 .navbar
 {
-    margin: 25px;
-    padding: 20px;
+    margin: 15px;
+    padding: 30px;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-evenly;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 15px;
 }
 .logo
 {
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .nav-links 
 {
@@ -70,16 +97,178 @@ body
 
 .nav-links li
 {
-    margin: 0 30px;
+    margin: 0 25px;
 }
 
-.nav-buttons
+.nav-links li a
+{
+    text-decoration: none;
+    color: white;
+}
+.material-icons
+{
+    margin-left: -28px;
+}
+.material-icons.md-18
+{
+    font-size: 18px;
+}
+
+.sign-up
 {
     margin-top: 15px;
+    margin-left:25px;
 }
 
-.sign-up-btn
+.sign-up a 
 {
-    
+    text-decoration: none;
+    color: white;
+}
+.nav-button
+{
+    margin-top: -25px;
 }
 
+
+.log-in-btn
+{
+    margin-top: 20px;
+    margin-right: 50px;
+    background-color: blue;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    color: white;
+}
+
+.log-in-btn a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.material-icons.md-36
+{
+    font-size: 36px;
+    margin: 5px;
+    margin-right: 10px;
+    margin-left: -50px;
+}
+
+.hero-content
+{
+    margin: 15px;
+    padding: 50px;
+    margin-left: 90px;
+    margin-top: -80px;
+}
+
+.hero-content-header
+{
+    font-size: 25px;
+    width: 500px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Compilance
+{
+    color:blue;
+}
+.hero-para1
+{
+    font-size: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* .line
+{
+    width: 40px;
+    background-color: blue;
+    height: 10px;
+} */
+.hero-para2
+{
+    width: 480px;
+    line-height: 30px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer
+{
+    margin-top: -30px;
+    position: absolute;
+    /* top:20; */
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.blocks
+{
+    width: 100%;
+}
+
+#block1
+{
+    background-color: #00BFFF;
+}
+#block2
+{
+    background-color: #1E90FF;
+}
+
+#block3
+{
+    background-color: #0000CD;
+}
+
+#block4
+{
+    background-color: #696969;
+}
+
+.hero-button
+{
+        /* margin-top: 20px;
+        margin-right: 50px; */
+    background-color: blue;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+}
+
+#block1 , #block2 , #block3 
+{
+    display: flex;
+}
+
+#block1 img , #block2 img, #block3 img
+{
+    margin: 10px;
+    margin-top: 25px;
+    padding: 10px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+}
+
+.blocks-header
+{
+    color: white;
+    margin-top: 30px;
+}
+
+.blocks-para
+{
+    margin-top: -10px;
+    color: white;
+    font-size: 12px;
+    padding: 2px;
+    margin-right: 10px;
+    width: 200px;
+}
