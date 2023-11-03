@@ -5,32 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justice - Legal Assistant</title>
     <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    
 </head>
     <body>
         <!--Container-->
         <div class="container-wrap">
             <!--Background Image-->
             <img src="./images/img1.jpg" alt="image"  class="img-bg"/>
+            <div class="overlay"></div>
             <!--Content-->
                 <div class="content">
                     <!--Navbar-->
-                    <nav class="navbar">
+                    <div class="navbar">
                         <div class="logo">logo</div> <!--Logo-->
                         <ul class="nav-links"> <!--Nav Linnks-->
-                            <li>Home</li>
-                            <li>About Us</li>
-                            <li>Legal Awarness</li>
-                            <li>Resources</li>
-                            <li>Partnerships</li>
-                            <li>Blogs</li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/">About Us</a></li>
+                            <li class="span-icon"><a href="/">Legal Awarness </a></li><span class="material-icons md-18" >
+                                keyboard_arrow_down
+                                </span>
+                            <li class="span-icon"><a href="/">Resources</a></li> 
+                            <span class="material-icons md-18" >keyboard_arrow_down</span>
+                            <li><a href="/">Partnerships</a></li>
+                            <li><a href="/">Blogs</a></li>
                         </ul>
-                        <div class="nav-buttons"> <!--Nav Buttons-->
-                            <!-- <button class="sign-up-btn">Sign Up</button> -->
-                            <button class="log-in-btn">Log In</button>
+                        <span class="sign-up"><a href="/">Sign Up </a></span>
+                          <!-- <button class="sign-up-btn">Sign Up</button> -->
+                        <div class="nav-button"> <!--Nav Buttons-->
+                            <button class="log-in-btn">
+                                <!-- <span class="material-icons md-36"> account_circle
+                                </span> -->
+                           <span class="log-in-text">Log In</span></button>
                         </div>
-                    </nav>
+                    </div>
                     <!--Navbar Ends-->
-
+                    <!--Hero Content-->
+                        <div class="hero-content">
+                            <div class="hero-content-header"><h2>Empowering Legal Awareness and <span class="Compilance"> Compliance </span>in India</h2></div>   
+                        <p class="hero-para1"><span class="line"></span>Your Perfect Assistance is Here.</p>
+                        <p class="hero-para2">Unlock the power of legal knowledge and ensure compilance with our digital assistant for legal awareness and comprehensive KYR framework, bridging the gap between rights and responsibilities.</p>
+                        <button class="hero-button">Contact Us</button>
+                    </div>
+                    <!--Hero Content Ends -->
+                    <div class="footer">
+                        <div class="blocks" id="block1"><img src="./images/chat.jpg" alt="image"/><div class="blocks-content"><p class="blocks-header">Multilingual ChatBot</p><p class="blocks-para">Our Multilingual Chatbot speaks your language making legal information available to all.Connect with confidence no matter your language.</p></div></div>
+                        <div class="blocks" id="block2"><img src="./images/pie-chart.jpg" alt="image"/><div class="blocks-content"><p class="blocks-header">User-Friendly Legal Resource</p><p class="blocks-para">Hellooo</p></div></div>
+                        <div class="blocks" id="block3"><img src="./images/bulb.jpg" alt="image"/><div class="blocks-content"><p class="blocks-header">Instant Legal Query Resolution</p><p class="blocks-para">Hellooo</p></div></div>
+                        <div class="blocks" id="block4"></div>
+                    </div>
                 </div>
             <!--Content Ends-->
 
