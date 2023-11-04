@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;@400;@500;@700;@800;@900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap'); */
 
 *
 {
@@ -248,7 +249,7 @@ body
 }
 
 .block-para-heading{
-    margin-top: 30px;
+    margin-top: 130px;
     padding: 15px;
     margin: 15px;
     color: white;
@@ -260,11 +261,13 @@ body
 
 .block-para-subpara
 {   
+    font-size: 15px;
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 15px;
-    margin: 5px;
-    margin-top: -10px;
+    margin: 5px; 
+    margin-top: -20px;
+    margin-bottom: 20px;
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
 }
@@ -273,3 +276,121 @@ body
 {
     margin-top: -8px;
 }
+
+.footer
+{
+    display: flex;
+        /* margin: 50px;
+        padding: 50px; */
+    background-color: #00008B;
+}
+
+/* Vector */
+.footer-logo
+{
+position: absolute;
+width: 226.6px;
+height: 224px;
+left: 209px;
+top: 2131px;
+background: #020741;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.part-one
+{
+    margin: 50px;
+    padding: 50px;
+}
+
+.part-one svg{
+    width: 126px;
+    height: 224px;
+}
+
+.logo-down-text
+{
+    margin-top: -50px;
+    font-size: 23px;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.logo-down-text-two
+{
+    margin-top: -25px;
+    margin-left: 40px;
+    font-size: 8px;
+    color: #D4D4D4;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer-tagline
+{
+    margin-top: 30px;
+    margin-left: 10px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+.social-links
+{
+    margin-top: 30px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.social-links img{
+    color: white;
+}
+
+.part-two
+{  
+    margin-top: 130px;
+    margin-left: 50px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.part-two h3
+{
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.part-two p
+{
+    /* display: block; */
+    padding: 10px;
+    font-weight: 200;
+}
+
+
+.part-three
+{
+    font-family: 'Raleway', sans-serif;
+    margin-top: 130px;
+    margin-left: 130px;
+    color: white;
+    
+}
+
+.part-three h3
+{
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+.part-three p
+{
+    /* display: block; */
+    padding: 10px;
+    font-weight: 200;
+}
+
