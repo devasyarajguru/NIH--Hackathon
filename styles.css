@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;@400&display=swap');
 
 *
 {
@@ -167,7 +167,7 @@ body
 
 .Compilance
 {
-    color:blue;
+    color:#4F5DFC;
 }
 .hero-para1
 {
@@ -192,14 +192,16 @@ body
 
 .main-section
 {
+
     display: flex;
     justify-content: space-between;
     /* margin: 20px; 
     padding: 20px;  */
-    background-color: #F5F5F5; 
+    background-color: lightgray; 
 }
 .blocks
 {
+            height: max-content;
             flex: 1;
             background-color: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -209,7 +211,10 @@ body
             border-radius: 10px;
             text-align: center;
 }
-
+#change-img
+{
+    margin-top: 130px;
+}
 .blocks.block1
 {
     background-color: #83C4FF;
@@ -228,4 +233,43 @@ body
     width: 170px;
     padding: 20px;
     margin: 20px;
+}
+
+.block-para
+{
+    width: 100%;
+    height: 50%;
+    /* background-color: aquamarine; */
+    border-radius: 20px; 
+    /* border:2px solid black; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  */
+    /* box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.block-para-heading{
+    margin-top: 30px;
+    padding: 15px;
+    margin: 15px;
+    color: white;
+    font-size: 25px;
+    width: 250px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.block-para-subpara
+{   
+    color: white;
+    text-align: left;
+    padding: 15px;
+    margin: 5px;
+    margin-top: -10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+
+#instant
+{
+    margin-top: -8px;
 }
