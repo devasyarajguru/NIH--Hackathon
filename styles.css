@@ -33,7 +33,6 @@ body
 {
  overflow: hidden;
   position: relative;
-  height:100vh;
 }
 
 .img-bg
@@ -67,13 +66,17 @@ body
 
 .content
 {
+    height: 500px;
+    overflow: hidden;
     position: relative;
-    margin-top: -10px;
+    /* margin-top: -10px; */
 
 }
 
 .navbar
 {
+    position: relative;
+    /* height: 33vh; */
     margin: 15px;
     padding: 30px;
     display: flex;
@@ -114,22 +117,10 @@ body
     font-size: 18px;
 }
 
-.sign-up
-{
-    margin-top: 15px;
-    margin-left:25px;
-}
-
-.sign-up a 
-{
-    text-decoration: none;
-    color: white;
-}
 .nav-button
 {
     margin-top: -25px;
 }
-
 
 .log-in-btn
 {
@@ -158,6 +149,8 @@ body
 
 .hero-content
 {
+    position: relative;
+    height: 33vh;
     margin: 15px;
     padding: 50px;
     margin-left: 90px;
@@ -197,78 +190,42 @@ body
     font-family: 'Roboto', sans-serif;
 }
 
-.footer
+.main-section
 {
-    margin-top: -30px;
-    position: absolute;
-    /* top:20; */
     display: flex;
-    height: 100%;
-    width: 100%;
+    justify-content: space-between;
+    /* margin: 20px; 
+    padding: 20px;  */
+    background-color: #F5F5F5; 
 }
-
 .blocks
 {
-    width: 100%;
+            flex: 1;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 60px; 
+            margin-top: 50px;   
+            border-radius: 10px;
+            text-align: center;
 }
 
-#block1
+.blocks.block1
 {
-    background-color: #00BFFF;
+    background-color: #83C4FF;
 }
-#block2
+.blocks.block2
 {
-    background-color: #1E90FF;
+    background-color: #4F5DFC;
 }
-
-#block3
+.blocks.block3
 {
-    background-color: #0000CD;
+    background-color: #83C4FF;
 }
-
-#block4
+.blocks-image
 {
-    background-color: #696969;
-}
-
-.hero-button
-{
-        /* margin-top: 20px;
-        margin-right: 50px; */
-    background-color: blue;
-    width: 150px;
-    height: 40px;
-    border-radius: 20px;
-    color: white;
-}
-
-#block1 , #block2 , #block3 
-{
-    display: flex;
-}
-
-#block1 img , #block2 img, #block3 img
-{
-    margin: 10px;
-    margin-top: 25px;
-    padding: 10px;
-    width: 90px;
-    height: 90px;
-    border-radius: 50px;
-}
-
-.blocks-header
-{
-    color: white;
-    margin-top: 30px;
-}
-
-.blocks-para
-{
-    margin-top: -10px;
-    color: white;
-    font-size: 12px;
-    padding: 2px;
-    margin-right: 10px;
-    width: 200px;
+   border-radius: 50%;
+    width: 170px;
+    padding: 20px;
+    margin: 20px;
 }
