@@ -8,22 +8,6 @@
     box-sizing: border-box;
 }
 
-/* body {
-    background-image: url('./images/img1.jpg');
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    position: relative; 
-    background-color: rgba(255, 255, 255, 0.3);;
-} */
-
 body
 {
     margin: 0;
@@ -48,7 +32,7 @@ body
   left: 0;
   top: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .overlay
@@ -60,8 +44,8 @@ body
     height: 100%;
     /* background: rgba(0, 0, 0, 0.4); */
     background: linear-gradient(
-        rgba(0, 0, 0, 0.4), 
-        rgb(0, 0, 0 , 0.4)
+        rgba(0, 0, 0, 0.7), 
+        rgb(0, 0, 0 , 0.7)
       );
 }
 
@@ -77,7 +61,6 @@ body
 .navbar
 {
     position: relative;
-    /* height: 33vh; */
     margin: 15px;
     padding: 30px;
     display: flex;
@@ -85,71 +68,34 @@ body
     font-family: 'Raleway', sans-serif;
     color: white;
     font-size: 15px;
-}
+    }
 .logo
 {
-    margin-top: 15px;
+    margin-top: 20px;
     margin-left: 20px;
 }
-.nav-links 
+
+ul
 {
+    /* background-color: aqua; */
     display: flex;
-    /* justify-content: space-around; */
     list-style: none;
-    /* padding: 0; */
+    margin-top: -10px;
+    padding: 10px;
 }
 
-.nav-links li
-{
+ul li{
     color: white;
-    cursor: pointer;
     margin: 0 25px;
+    cursor: pointer;
 }
 
-.nav-links a
+ul li a 
 {
+    cursor: pointer;
     text-decoration: none;
     color: white;
 }
-.material-icons
-{
-    margin-left: -28px;
-}
-.material-icons.md-18
-{
-    font-size: 18px;
-}
-
-.nav-button
-{
-    margin-top: -25px;
-}
-
-.log-in-btn
-{
-    margin-top: 20px;
-    margin-right: 50px;
-    background-color: blue;
-    width: 150px;
-    height: 50px;
-    border-radius: 20px;
-    color: white;
-}
-
-.log-in-btn a
-{
-    text-decoration: none;
-    color: white;
-}
-
-.material-icons.md-36
-{
-    font-size: 36px;
-    margin: 5px;
-    margin-right: 10px;
-    margin-left: -50px;
-}
-
 .hero-content
 {
     position: relative;
@@ -191,6 +137,7 @@ body
     line-height: 30px;
     color: white;
     font-family: 'Roboto', sans-serif;
+    letter-spacing: 1.5px;
 }
 
 .main-section
@@ -371,6 +318,11 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-weight: 200;
 }
 
+.part-two p a
+{
+    text-decoration: none;
+    color: white;
+}
 
 .part-three
 {
@@ -379,6 +331,10 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-left: 130px;
     color: white;
     
+}
+
+.part-three svg{
+    display: flex;
 }
 
 .part-three h3
@@ -487,38 +443,156 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .hero-content-header.dash{
     margin-left: -80px;
-    margin-top: -20px;
+    margin-top: -0px;
     font-size: 48px;
+}
+
+.hero-para1.dash-btn
+{
+    margin-top: -15px;
 }
 .hero-para1.dash-btn button
 {
+    margin-left: -50px;
     display: inline-block;
-    padding: 20px 20px;
+    padding: 10px 10px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
-    border: 2px solid #3498db; /* Border color */
+    border: 2px solid #4F5DFC; 
     color: #fff; /* Text color */
-    background-color: #3498db; /* Background color */
+    background-color: #4F5DFC; /* Background color */
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    /* cursor: pointer; */
+}
+
+.hero-para1.dash-btn button a 
+{
+    text-decoration: none;
+    color:white;
     cursor: pointer;
 }
 
-.hero-para2.dash-btn button
-{
-    margin-top: 30px;
-    display: inline-block;
-    padding: 20px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
-    border: 2px solid #3498db; /* Border color */
-    color: #fff; /* Text color */
-    background-color: #3498db; /* Background color */
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    cursor: pointer;
+.logo svg{
+    margin-left: 15px;
+    margin-top: -30px;
 }
+
+.top-logo
+{
+    margin-left: 75px;
+    margin-top: -50px;
+}
+
+.top-logo-down
+{
+    margin-left: 85px;
+    margin-top: -28px;
+}
+
+.rectangle-4
+{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 250px;
+    left: 900px;
+    background: #4F5DFC;
+    box-shadow: 4px 4px 30px 18px rgba(0, 0, 0, 0.12);
+    border-radius: 30px;
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.rectangle-5
+
+{
+position: absolute;
+width: 120px;
+height: 120px;
+top: 300px;
+left: 900px;
+background: #FFFFFF;
+box-shadow: 4px 4px 30px 18px rgba(0, 0, 0, 0.12);
+border-radius: 30px;
+transform: rotate(-45deg);
+}
+
+
+.rectangle-6
+{
+box-sizing: border-box;
+position: absolute;
+width: 120px;
+height: 120px;
+top: 100px;
+right: -80px;
+background: rgba(255, 255, 255, 0.08);
+border: 74px solid #FFFFFF;
+box-shadow: 4px 4px 30px 18px rgba(0, 0, 0, 0.2);
+border-radius: 69px;
+transform: rotate(-45deg);
+}
+
+.line-part
+{
+    width: 1005;
+    background-color: #7580FF;
+    height: 10px;
+}
+
+.bottom-rights
+{
+    width: 100%;
+    background-color: black;
+    height: 10vh;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding:20px;
+}
+
+.gg-instagram {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    color:black;
+   }
+   
+   .gg-instagram::after,
+   .gg-instagram::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+   }
+   
+   .gg-instagram::after {
+    border: 2px solid;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 3px;
+   }
+   
+   .gg-instagram::before {
+    border-radius: 3px;
+    width: 20px;
+    height: 2px;
+    background:currentColor;
+    right: 1px;
+    top: 1px;
+   } 
+   .footer-icons
+   {
+    margin-right:30px;
+   }
