@@ -333,10 +333,10 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
 }
 
-.part-three svg{
-    display: flex;
-}
 
+.part-three img{
+    margin-top: 18px;
+}
 .part-three h3
 {
     font-size: 25px;
@@ -345,11 +345,17 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-weight: 900;
 }
 
+.part-three-icons
+{
+    display: flex;
+    margin: -12px;
+}
+
 .part-three p
 {
-    /* display: block; */
     padding: 10px;
     font-weight: 200;
+    margin-left: 15px;
 }
 
 .legal-header
@@ -545,6 +551,10 @@ transform: rotate(-45deg);
 
 .bottom-rights
 {
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    display: flex;
     width: 100%;
     background-color: black;
     height: 10vh;
@@ -554,45 +564,3 @@ transform: rotate(-45deg);
     padding:20px;
 }
 
-.gg-instagram {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    transform: scale(var(--ggs,1));
-    border: 2px solid transparent;
-    box-shadow: 0 0 0 2px;
-    border-radius: 4px;
-    width: 20px;
-    height: 20px;
-    color:black;
-   }
-   
-   .gg-instagram::after,
-   .gg-instagram::before {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-   }
-   
-   .gg-instagram::after {
-    border: 2px solid;
-    left: 3px;
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    top: 3px;
-   }
-   
-   .gg-instagram::before {
-    border-radius: 3px;
-    width: 20px;
-    height: 2px;
-    background:currentColor;
-    right: 1px;
-    top: 1px;
-   } 
-   .footer-icons
-   {
-    margin-right:30px;
-   }
