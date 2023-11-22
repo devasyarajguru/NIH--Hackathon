@@ -7,7 +7,7 @@ const sendBtn = document.querySelector(".span-btn");
 const chatDetails = document.querySelector(".chat-container")
 
 let userText = null;
-const API_KEY = "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"
+const API_KEY = "" // API key here
 
 //  Function for creating element
 function createElement(html, className)
