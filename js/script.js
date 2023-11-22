@@ -167,3 +167,5 @@ buttonElement.addEventListener('click' , clearInput)
      checkLength(name,3,15);
      checkLength(password,6,20)
  })
+
+
