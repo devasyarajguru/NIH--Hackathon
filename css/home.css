@@ -181,13 +181,13 @@ border-radius: 24px;
     margin-top: -40px;
 }
 
-
 .slide-main-content-heading
 {
     text-align: center;
     font-size: 23px;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .line-dot-content

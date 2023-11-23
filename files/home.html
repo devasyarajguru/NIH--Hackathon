@@ -157,7 +157,7 @@
                     <div class="slide-main-content">
                         <!--slide-main-content-heading-->
                         <div class="slide-main-content-heading">
-                            Justice Chatbot
+                            <span class="justice">Justice</span> Chatbot
                         </div>
                         <!-- line-dot-content -->
                         <div class="line-dot-content">
@@ -219,5 +219,43 @@
         </div>
     </div>
      
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var headingElement = document.querySelector('.slide-main-content-heading');
+            var listItems = document.querySelectorAll('.line-dot-content ul li');
+    
+            var headings = ['Justice Chatbot', 'Legal Assistance', 'Expert Support'];
+            var categories = [
+                ["Instant Legal Information", "Self-Help Legal Exploration", "Legal Learning Resources", "Efficient Legal Support System", "User-Friendly Interface"],
+                ["Category-Specific Assistance", "Empowerment Through Knowledge", "Case Evaluation and Strategy", "Legal Research and Information", "Educational Resources"],
+                ["Direct Access to Legal Professionals", "Personalized Consultations", "Confidentiality and Privacy", "Case-Specific Guidance", "Document Review and Drafting"]
+            ];
+    
+            var currentIndexHeading = 0;
+            var currentIndexList = 0;
+    
+            function updateHeading() {
+                headingElement.textContent = headings[currentIndexHeading];
+            }
+    
+            function updateListItems() {
+                for (var i = 0; i < listItems.length; i++) {
+                    listItems[i].textContent = categories[currentIndexList][i];
+                }
+            }
+    
+            setInterval(function () {
+                currentIndexHeading = (currentIndexHeading + 1) % headings.length;
+                currentIndexList = (currentIndexList + 1) % categories.length;
+    
+                updateHeading();
+                updateListItems();
+            }, 5000); // Change every 5 seconds
+    
+            // Initial update
+            updateHeading();
+            updateListItems();
+        });
+    </script>
 </body>
 </html>
