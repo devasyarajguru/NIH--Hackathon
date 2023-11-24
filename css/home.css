@@ -114,20 +114,32 @@ body{
     /* background-color: red; */
 }
 
+.rectangle-6
+{
+    position: absolute;
+    top: 10;
+    left:550px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-45deg);
+    border-radius: 20px;
+    border: 74px solid #FFF;
+    z-index: -1;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 4px 4px 30px 7px rgba(0, 0, 0, 0.20);
+}
+
 .home-container p
 {
-    /* Empowering Legal Awareness and Compliance in India */
-
-/* Empowering Legal Awareness and Compliance in India */
 position: absolute;
 width: 600px;
 height: 126px;
 left: 135px;
 top: -5px;
-font-family: 'Be Vietnam Pro';
+font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 700;
-font-size: 43px;
+font-size: 38px;
 line-height: 90.5%;
 /* or 26px */
 font-feature-settings: 'liga' off;
