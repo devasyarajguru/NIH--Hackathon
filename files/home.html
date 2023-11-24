@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="../css/home.css">
+   
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          // Get the screen width in pixels
+          var screenWidth = window.screen.width;
+
+          // Set default zoom level to 125%
+          var zoomLevel = "125%";
+
+          // If the screen width is less than or equal to 1366 pixels (assuming a 14-inch laptop)
+        //  if (screenWidth <= 1366) {
+          //    zoomLevel = "80%";
+          //}
+
+          // Apply the zoom level
+          document.body.style.zoom = zoomLevel;
+      });
+  </script>
 </head>
 <body>
      <!--Sidebar-->

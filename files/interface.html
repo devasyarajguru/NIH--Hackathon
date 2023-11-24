@@ -113,7 +113,7 @@ if (userToken === null || userId === null){
                 })
                 
             })
-            chatItem.innerHTML = ` <img src="male.png" alt="Profile Image" class="profile-image">
+            chatItem.innerHTML = ` <img src="../images/male.png" alt="Profile Image" class="profile-image">
             <div class="chat-details">
                 <h4>${name}</h4>
                 <p>Query ID: ${element.query}</p>
@@ -244,9 +244,10 @@ function sendMessage() {
           <h1 class="profile-name" id="profileName">Lisa Ann</h1>
           <div class="icon-container">
             <!-- Icons go here -->
-            <div class="icon"><a href="" id="phoneCall"><img src="phone-call.svg" alt="Phone"></div></a>
-            <div class="icon"><a href="" id="mailTo"><img src="envelope.svg" alt="Email"></div></a>
-            <div class="icon"><a href="" id="skypeTo"><img src="video-camera-alt.svg" alt="Video"></div></a>
+            <div class="icon"><a href="" id="phoneCall"><img src="../images/phone-call.svg" alt="Phone" style="width: 34px;
+                height: 34px;"></div></a>
+            <div class="icon"><a href="" id="mailTo"><img src="../images/envelope.svg" alt="Email"  style="width:34px; height:34px;"  id="envelope-svg"></div></a>
+            <div class="icon"><a href="" id="skypeTo"><img src="../images/video-camera-alt.svg" alt="Video" style="width: 34px; height:34px;"  id="videoCamera-svg"></div></a>
           </div>
           <div class="shared-files">
             <h2>Shared Files</h2>

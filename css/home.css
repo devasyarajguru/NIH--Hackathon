@@ -296,3 +296,16 @@ border-radius: 24px;
   position: relative;
   }
   
+  /* @media screen and (min-width: 1920px)
+  {
+    .home-container p
+    {
+        width: 660px;
+        height: 78px;
+    }
+
+    .slide-main{
+        width: 570px;
+height: 775px;
+    }
+  } */
