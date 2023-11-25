@@ -2,15 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Flexbox Sidebar and Container</title>
-  <link rel="stylesheet" href="../css/awareness.css">
+  <title>Awareness</title>
+  <link rel="stylesheet" href="../css/awareness 1.css">
   
 </head>
 <body>
+  
     <!--Wrapper-->
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    <style>
+        #google_translate_element {
+            margin-left: 100px; /* Adjust the value as needed */
+        }
+    </style>
+    
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <div class="wrapper">
-     <!--Sidebar-->
-     <div class="sidebar">
+      <!--Sidebar-->
+    <div class="sidebar">
         <div class="justice-side-logo">
             <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="32" cy="32" r="32" fill="white"/>
@@ -19,10 +35,10 @@
         </div>
 
         <ul class="link-list">
-            <li><a href="./dashboard.html"><img src="../images/home.png" height="35" width="35"/></a></li>
-            <li><a href="./chatbot.html"><img src="../images/chat2.jpg" height="40" width="40" id="chat-img"></a></li>
-            <li><a href="#"><img src="../images/user.png" height="35px" width="35px"></a></li>
-            <li><a href="./legal.html"><img src="../images/law.png" height="35px" width="35px"></a></li>
+            <li><a href="./home.html"><img src="../images/home.png" height="35" width="35"/></a></li>
+            <li><a href="./interface.html"><img src="../images/chat2.jpg" height="40" width="40" id="chat-img"></a></li>
+            <li><a href="./chatbot.html"><img src="../images/chatbot.svg" height="35px" width="35px"></a></li>
+            <li><a href="./awareness.html"><img src="../images/law.png" height="35px" width="35px"></a></li>
         </ul>
     </div>
      <!--Sidebar Ends-->
@@ -39,24 +55,53 @@
             <!--Box-Container-->
         <div class="box-container">
             <div class="main-box">
-                <div class="box">
-                    <div class="box-head">Family & Marriage</div>
+                <div class="box"><a href="parent.html">
+                    <div class="box-head">Parents</div>
                     <div class="line-4"></div>
-                    <div class="box-para">Discover legal insights on marriage, divorce, and annulment based on governing personal laws.</div> 
+                    <div class="box-para">Foster a supportive environment for your child's development by gaining insight into your legal rights and responsibilities as parents, ensuring a foundation of security and well-being</div> 
+                </a>    </div>
+                <div class="box">    <a href="women2.html">
+                    <div class="box-head">Women</div>
+                    <div class="line-4"></div>
+                    <div class="box-para">Empowering women involves understanding their legal rights and responsibilities, fostering a foundation for equality and justice.</div>
+                </a>
+</div>
+                <div class="box"><a href="students.html">
+                    <div class="box-head">Students</div>
+                    <div class="line-4"></div>
+                    <div class="box-para">Nurture a successful academic journey by familiarizing yourself with your legal rights and responsibilities as a student, fostering an environment conducive to learning and growth.</div>                </a>
                 </div>
-                <div class="box">2</div>
-                <div class="box">3</div>
-                <div class="box">4</div>
-                <div class="box">5</div>
-                <div class="box">6</div>
-                <div class="box">7</div>
-                <div class="box">8</div>
-                <div class="box">9</div>
+                <div class="box"><a href="nri.html">
+                    <div class="box-head">NRI/OCI/PIO</div>
+                    <div class="line-4"></div>
+                    <div class="box-para">Cultivate a seamless global experience by comprehending your legal rights and responsibilities as an NRI/OCI/PIO, ensuring a harmonious blend of cultural connection and legal adherence.</div>                </a>
+                </div>
+                <div class="box"><a href="Employees.html">
+                    <div class="box-head">Employees</div>
+                    <div class="line-4"></div>
+                    <div class="box-para">Navigate the workplace confidently by understanding your legal rights and responsibilities as an employee, fostering a balanced and productive professional environment.</div></a></div>
+                
+                <div class="box"><a href="Informal Workers.html">
+                    <div class="box-head">Informal Workers</div>
+                    <div class="line-4"></div>
+                    <div class="box-para">Empower your work journey: Grasp your legal rights and responsibilities as an informal worker for a fair and secure livelihood.</div></a></div>
+               
+                <div class="box"><a href="children.html">
+                    <div class="box-head">Children</div>
+                    <div class="line-4"></div>
+                    <div class="box-para">Ensure a protected childhood: Know and uphold the legal rights and duties as a child.</div></a></div>
+                    <div class="box"><a href="LGBTQ+.html">
+                        <div class="box-head">LGBTQI+</div>
+                        <div class="line-4"></div>
+                        <div class="box-para">Champion diversity: Recognize your legal rights and responsibilities as an LGBTQI+ individual, fostering an inclusive and affirming community.</div></a></div>
+                        <div class="box"><a href="sc.st.html">
+                            <div class="box-head">SC/ST</div>
+                            <div class="line-4"></div>
+                            <div class="box-para">Navigate with awareness: Know your legal rights and duties as an SC/ST individual for an equitable community.</div></a></div>
+                                 
             </div>
-        </div>
+            
         
-            <!--Box-Container-->
-
     </main>
      <!--Main Container-->
   </div>

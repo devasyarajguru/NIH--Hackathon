@@ -28,19 +28,10 @@ async function getChatResponse(inComingDiv)
     const options =
     {
         method:'POST',
-        headers:
-        {
-            'Authorization': `Bearer ${API_KEY}`,
-            "Content-Type": "application/json"
-        },
+        
         body:JSON.stringify(
         {
-            model: "gpt-3.5-turbo-instruct",
-            prompt: userText,
-            max_tokens: 2048,
-            temperature: 0.2,
-            n:1,
-            stop:null
+           
         })
     }
     // Send Post request to API , get response and set the the response as paragraph element text

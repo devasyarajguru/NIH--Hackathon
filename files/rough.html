@@ -1,24 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8">
+  <title>Flex Sidebar and Container</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <style>
-    body
-    {
-        margin: 0;
-        padding: 0;
-        background-color: red;
-    }
+  /* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style for the wrapper, using flex */
+.wrapper {
+  display: flex;
+  height: 100vh;
+  overflow: auto; /* Enable scrolling for the entire content */
+}
+
+/* Style for the sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Style for the container */
+.container {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Optional styling for better visuals */
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
 </style>
 <body>
-<div class="container">
-    <section class="1">Hey</section>
-    <section class="2">Final</section>
-</div>
-       
+  <div class="wrapper">
+    <aside class="sidebar">
+      <!-- Sidebar content -->
+      <h2>Sidebar</h2>
+      <ul>
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+      </ul>
+    </aside>
+    <main class="container">
+      <!-- Main content -->
+      <h1>Main Content</h1>
+      <p>Your main content goes here.</p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+
+
+      v
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+
+
+
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      v
+      v
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      v
+
+
+
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      v
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quae. Provident vero, quibusdam debitis cum adipisci molestiae quos consectetur id excepturi saepe repellat sint ut dolor ea a minima sunt.
+      v
+      v
+    </main>
+  </div>
 </body>
 </html>

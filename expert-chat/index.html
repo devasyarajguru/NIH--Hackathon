@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Application</title>
+<link rel="stylesheet" href="styles.css">
+<script>
+const serverURL = "15.206.72.47";
+var messageThreads = [];
+const userToken = localStorage.getItem("token");
+const userId = localStorage.getItem("userId")
+var currentThread = null;
+var currentThreadID = null;
+let client = new WebSocket(`ws://${serverURL}/ws/chat/?token=${userToken}`);
+client.onmessage = function(event) {
+  console.log(event);
+  message = JSON.parse(event.data);
+  let chatConversation = document.getElementById('chatConversation');
+  let messageElement = document.createElement("div");
+  threadindex = messageThreads.findIndex((obj => obj.id == message.thread));
+  messageThreads[threadindex].messages.push(message);
+
+  if(message.thread === currentThreadID){
+    if(message.sent_by_id == userId){
+        messageElement.className = "message";
+    }else{
+        messageElement.className = "prompt";
+    }
+    messageElement.textContent = message.message;
+    chatConversation.appendChild(messageElement);
+  }
+    
+
+};
+// "{\"id\": 3, \"timestamp\": \"24/Nov/23 01:00:06\", \"sent_by\": \"Dev\", \"sent_by_id\": 7, \"message\": \"hello\", \"thread\": 1}"
+
+
+if (userToken === null || userId === null){
+    alert("No User Token or Id Found");
+}else {
+    fetch(`http://${serverURL}/chat/get-all-threads/`, {
+        method: 'GET',
+         headers: {
+               'Content-Type': 'application/json',
+               
+               'Authorization': `Token ${userToken}`
+         },
+    })
+    .then(response => response.json())
+    .then(data => {
+        var chatScreen = document.getElementById("chatScreen");
+        messageThreads = data
+        // console.log(messageThreads[0]);
+        messageThreads.forEach((element, index) => {
+            // console.log(element)
+            if(element.first_user_id == userId){
+                var name = element.second_user
+            }else {
+                var name = element.first_user
+            }
+            let chatItem = document.createElement('div');
+            // console.log(name)
+            chatItem.className= "chat-item";
+            chatItem.addEventListener("click", function() {
+                
+                currentThread = index;
+
+                let thread = messageThreads[index];
+                console.log(thread)
+                currentThreadID = thread.id;
+
+                if(thread.first_user_id == userId){
+                    document.getElementById("userName").innerHTML = thread.second_user
+                    fetch(`http://${serverURL}/auth/user/${thread.second_user_id}`, {
+                        method: "GET"
+                    }).then(response => response.json())
+                    .then(data => {
+                        console.log(data)
+                        document.getElementById('profileName').innerHTML = data.name;
+                        document.getElementById('phoneCall').setAttribute('href', `tel:${data.phone}`)
+                        document.getElementById('mailTo').setAttribute('href', `mailto:${data.email}`)
+
+                    })
+                    
+                }else {
+                    fetch(`http://${serverURL}/auth/user/${thread.first_user_id}`, {
+                        method: "GET"
+                    }).then(response => response.json())
+                    .then(data => {
+                        console.log(data)
+                        document.getElementById('profileName').innerHTML = data.name;
+                        document.getElementById('phoneCall').setAttribute('href', `tel:${data.phone}`)
+                        document.getElementById('mailTo').setAttribute('href', `mailto:${data.email}`)
+
+                    })
+                    document.getElementById("userName").innerHTML = thread.first_user
+                }
+                let messages = thread.messages;
+                let chatConversation = document.getElementById('chatConversation');
+                chatConversation.innerHTML = ""
+
+                messages.forEach(message => {
+                    let messageElement = document.createElement("div");
+                    
+                    if(message.sent_by_id == userId){
+                        messageElement.className = "message";
+                    }else{
+                        messageElement.className = "prompt";
+                    }
+                    messageElement.textContent = message.message;
+                    chatConversation.appendChild(messageElement);
+                })
+                
+            })
+            chatItem.innerHTML = ` <img src="male.png" alt="Profile Image" class="profile-image">
+            <div class="chat-details">
+                <h4>${name}</h4>
+                <p>Query ID: ${element.query}</p>
+            </div>
+            <div class="chat-time">20:30</div>`;
+
+            chatScreen.appendChild(chatItem);
+            // console.log(chatScreen);
+        });
+    })
+    .catch(error => {
+        console.error(error);
+    })
+}
+
+
+
+function sendMessage() {
+    let messageInput = document.getElementById('messageInput');
+    if(currentThread == null){
+        alert("Select an user to send Message");
+    }
+    client.send(JSON.stringify({thread_id:currentThreadID, message:messageInput.value}))
+    messageInput.value="";
+
+
+    // var messageInput = document.getElementById('messageInput');
+    // var chatConversation = document.getElementById('chatConversation');
+    // var promptBox = document.getElementById('promptBox');
+
+    // // Create a new message element
+    // var messageElement = document.createElement('div');
+    // messageElement.className = 'message';
+    // messageElement.textContent = messageInput.value;
+
+    // // Append the new message to the chat conversation
+    // chatConversation.appendChild(messageElement);
+
+    // // Create a new prompt element
+    // var promptElement = document.createElement('div');
+    // promptElement.className = 'prompt';
+    // promptElement.textContent = "Message from opp guy";
+    // // promptElement.style.backgroundColor = '#00274e'; // Dark blue color
+
+    // // Append the new prompt below the last message
+    // chatConversation.appendChild(promptElement);
+
+    // // Clear the input field after sending the message
+    // messageInput.value = '';
+}
+
+</script>
+</head>
+<body>
+
+<div class="app-container">
+    <aside class="sidebar">
+        <!-- Sidebar content here (icons and search bar) -->
+    </aside>
+    <section class="chat-list">
+        <!-- List of chats here -->
+         <div class="search-bar">
+        <input type="text" placeholder="Search">
+    </div>
+    <div class="chat-screen" id="chatScreen">
+        <!-- Repeat chat-item for each chat -->
+        <!-- <div class="chat-item">
+            <img src="male.png" alt="Profile Image" class="profile-image">
+            <div class="chat-details">
+                <h4>Emily Reynolds</h4>
+                <p>Hi there! I was reviewing the contract you sent over...</p>
+            </div>
+            <div class="chat-time">20:30</div>
+        </div>
+
+        <div class="chat-item">
+            <img src="male.png" alt="Profile Image" class="profile-image">
+            <div class="chat-details">
+                <h4>Emily Reynolds</h4>
+                <p>Hi there! I was reviewing the contract you sent over...</p>
+            </div>
+            <div class="chat-time">20:30</div>
+        </div> -->
+        <!-- Add more chat-item divs here for each chat -->
+    </div>
+    </section>
+    <section class="chat-window">
+        <header class="chat-header">
+            <div class="user-info">
+                <span class="user-name" id="userName">Lisa Ann</span>
+                <!-- <span class="user-status">Active</span> -->
+            </div>        </header>
+        <div class="chat-conversation" id="chatConversation">
+            <!-- Conversation bubbles here -->
+
+        </div>
+        <div class="prompt-box" id="promptBox"></div>
+
+        <footer class="chat-input">
+            <div class="input-container">
+                <i class="attachment-icon">📎</i>
+                <input type="text" id="messageInput" placeholder="Type here">
+                <button class="send-button" onclick="sendMessage()">Send</button>
+            </div>
+            <!-- Other input options -->
+        </footer>
+
+    </section>
+    <aside class="info-panel">
+        <div class="profile-image">
+            <!-- Profile image goes here -->
+          </div>
+          <h1 class="profile-name" id="profileName">Lisa Ann</h1>
+          <div class="icon-container">
+            <!-- Icons go here -->
+            <div class="icon"><a href="" id="phoneCall"><img src="phone-call.svg" alt="Phone"></div></a>
+            <div class="icon"><a href="" id="mailTo"><img src="envelope.svg" alt="Email"></div></a>
+            <div class="icon"><a href="" id="skypeTo"><img src="video-camera-alt.svg" alt="Video"></div></a>
+          </div>
+          <div class="shared-files">
+            <h2>Shared Files</h2>
+            <div class="file">
+              <div class="file-icon"></div>
+              <div class="file-name">resume.pdf</div>
+              <div class="file-size">2.2 Mb</div>
+            </div>
+            <!-- More files go here -->
+          </div>    </aside>
+
+          
+</div>
+
+</body>
+</html>

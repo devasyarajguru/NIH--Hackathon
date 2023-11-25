@@ -137,6 +137,37 @@
     margin-bottom: 10px;
 }
 
+.signup-container {
+    text-align: center;
+    
+  }
+  
+  /* Styles for the message */
+  .message {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for the signup button */
+  .signup-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Change color as desired */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+    .signup-button a
+    {
+        text-decoration: none;
+        color: white;
+    }
+  .signup-button:hover {
+    background-color: #0056b3; /* Change color as desired */
+  }
+
     </style>
     
 </head>
@@ -154,10 +185,10 @@
                 <div class="col-lg-6 px-5 pt-5">
                     <h1 class="font-weight-bold py-3">Welcome To LegalHelpOffice</h1>
                     <h4>Sign into your account</h4>
-                    <form id="loginForm" action="login_backend.php" method="POST">
+                    <form id="loginForm" method="POST">
                         <!-- <div class="form-row"> -->
                         <div class="col-lg-9">
-                            <input type="phone" name="mobile" placeholder="Mobile Number" id="mobileInput" class="form-control my-3 p-2"
+                            <input type="email" name="mobile" placeholder="Email address" id="mobileInput" class="form-control my-3 p-2"
                                 required>
                                 <div id="mobileError" class="error-message"></div>
                         </div>
@@ -166,18 +197,16 @@
                                 required>
                                 <div id="passwordError" class="error-message"></div>
                         </div>
-                        <div class="dropdown">
-                        <select id="user_type" class="dropbtn" name="user_type">
-                        <div class="dropdown-content">
-			<option value="client">Client</option>
-			<option value="lawyer">Lawyer</option>
-            <option value="admin">Admin</option>
-		</select>
-</div>
+                        
+                        
 		<br><br>
                         
                         <div class="col-lg-9 my-4">
                                 <button id="loginbtn"  class="btn"aria-pressed="true"> <span>Login</span></button>
+                                <div class="signup-container">
+                                    <p class="message">Don't have an account?</p>
+                                    <button class="signup-button"><a href="../files/signup.html">Sign Up Now </a></button>
+                                </div>
                         </div>
 
                        

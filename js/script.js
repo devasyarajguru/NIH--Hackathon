@@ -111,10 +111,12 @@ buttonElement.addEventListener('click' , clearInput)
      if (re.test(input.value.trim()))
      {
          showSuccess(input);
+         return true;
      }
      else
      {
          showError(input,"Email is not valid");
+         return false;
      }
  }
 
@@ -126,12 +128,14 @@ buttonElement.addEventListener('click' , clearInput)
          if(input.value.trim() === "")
          {
              showError(input , `${fieldNames(input)} is required`)
+             return false;
          }
          else
          {
          showSuccess(input);
          }
      });
+     return true
  }   
 
  // check length
@@ -140,15 +144,18 @@ buttonElement.addEventListener('click' , clearInput)
      if(input.value.length < min)
      {
          showError(input, `${fieldNames(input)} must be atleast ${min} character`)
+         return false;
      }
      else if(input.value.length > max)
      {
          showError(input, `${fieldNames(input)} must be less than ${max} character`)
+         return false;
      }
 
      else
      {
          showSuccess(input);
+         return true;
      }
  }
 
@@ -162,10 +169,32 @@ buttonElement.addEventListener('click' , clearInput)
  form.addEventListener("submit" , function(e)
  {
      e.preventDefault();
-     checkField([name,email, password])
-     checkEmail(email);
-     checkLength(name,3,15);
-     checkLength(password,6,20)
+     var isValid = true;
+     isValid = isValid && checkField([name,email, password])
+     isValid = isValid && checkEmail(email);
+     isValid = isValid && checkLength(name,3,30);
+     isValid = isValid && checkLength(password,6,20)
+
+     if(isValid){
+        let formData = new FormData(form);
+        formData.forEach(data => {
+            console.log(data)
+        })
+        fetch("http://127.0.0.1:8000/auth/register/", {
+            method:"POST",
+            body: formData
+        })
+        .then( async response => {
+            const data = await response.json()
+            console.log(data);
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("userId", data.user.id);
+            localStorage.setItem("email", data.user.email);
+            localStorage.setItem("userType", data.user.user_type);
+        })
+        .catch(reason => alert("Please Make sure You have Give right credentials and don't have an acount already"));
+     }
+
  })
 
 

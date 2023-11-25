@@ -1,0 +1,274 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .chat-container {
+    display: flex;
+    flex-direction: column-reverse; /* Reverse the order of the elements */
+    margin-top: 10px; /* Adjust spacing as needed */
+}
+.search-bar input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 16px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #FFF;
+    /* background-image: url('search-icon.png'); Replace with your search icon */
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    padding-left: 40px; /* Adjust this based on your search icon's size */
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-details {
+    flex-grow: 1;
+    padding-right: 10px; /* Adjust spacing as needed */
+}
+
+.chat-details h4 {
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.chat-details p {
+    margin: 5px 0; /* Add some margin for better spacing */
+    color: #999;
+}
+
+.chat-time {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+/* Add the last child with no border */
+.chat-item:last-child {
+    border-bottom: none;
+}
+
+/* Style adjustments */
+.chat-container, .search-bar input, .chat-item {
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+}
+
+  .profile-image {
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+  .profile-name {
+    color: #333;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .icon {
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+  }
+  .icon img {
+    width: 100%;
+    height: auto;
+  }
+  .shared-files {
+    margin-top: 30px;
+  }
+  .file {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #e1e1e1;
+    padding: 10px 0;
+  }
+  .file-icon {
+    background-color: #e1e1e1;
+    border-radius: 3px;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  .file-name {
+    flex-grow: 1;
+    color: #555;
+  }
+  .file-size {
+    color: #999;
+  }
+
+  .chat-conversation {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1em; /* Add padding for better spacing */
+}
+
+.message {
+    background-color: #e6f7ff; /* Light blue background for messages */
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    max-width: 70%; /* Set the maximum width as needed */
+    align-self: flex-end; /* Align message to the left */
+    text-align: right;
+
+}
+
+  .app-container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .sidebar {
+    /* Styles for the sidebar */
+    width: 5%;
+    background-color: #3f48cc;
+  }
+  
+
+  .chat-header {
+    padding: 1em;
+    background-color: #ffffff; /* Set background color to white */
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+}
+
+.user-name {
+    color: #3366cc; /* Blue color for the name */
+    font-weight: bold;
+    font-size: 32px; /* Adjust font size as needed */
+}
+
+.prompt-box {
+    display: flex;
+    flex-direction: column-reverse; /* Reverse the order of the elements */
+    margin-top: 10px; /* Adjust spacing as needed */
+}
+
+.prompt {
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    max-width: 70%; /* Set the maximum width as needed */
+    align-self: flex-end; /* Align prompt to the right */
+    background-color: #00274e; /* Dark blue color */
+}
+.user-status {
+    color: #4caf50; /* Green color for the status */
+    font-size: 18px; /* Adjust font size as needed */
+}
+  .chat-list {
+    /* Styles for the chat list */
+    width: 30%;
+    background-color: #e4e9f7;
+    padding: 1em;
+  }
+  
+  .chat-screen {
+    /* Styles for the chat list */
+    width: 90%;
+    background-color: #e4e9f7;
+    padding: 1em;
+  }
+
+  .chat-window {
+    /* Styles for the chat window */
+    width: 55%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-panel {
+    /* Styles for the info panel */
+    width: 20%;
+    background-color: #f4f7fa;
+    padding: 1em;
+  }
+  
+  .chat-header {
+    /* Styles for chat header in chat window */
+  }
+  
+  .chat-conversation {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .chat-input {
+    /* Styles for the input area */
+  }
+
+  /* Add these styles for the new elements */
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+    border: 1px solid #ccc; /* Add a border for better visibility */
+    border-radius: 5px;
+}
+
+.attachment-icon {
+    margin-right: 0.5em; /* Adjust spacing */
+    cursor: pointer;
+}
+
+input {
+    flex-grow: 1;
+    padding: 0.5em;
+    margin-right: 0.5em; /* Adjust spacing */
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+.send-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 14px;
+}
