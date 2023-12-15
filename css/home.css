@@ -140,7 +140,6 @@ font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 38px;
-line-height: 90.5%;
 /* or 26px */
 font-feature-settings: 'liga' off;
 color: rgba(0, 0, 0, 0.58);
@@ -295,17 +294,23 @@ border-radius: 24px;
   z-index: 1; 
   position: relative;
   }
-  
-  /* @media screen and (min-width: 1920px)
-  {
-    .home-container p
-    {
-        width: 660px;
-        height: 78px;
-    }
 
-    .slide-main{
-        width: 570px;
-height: 775px;
-    }
-  } */
+  .justice {
+    /* Apply your CSS styles for 'Justice' here */
+    color: blue;
+    /* Other styles */
+}
+
+.legal {
+    /* Apply your CSS styles for 'Legal' here */
+    color: green;
+    /* Other styles */
+}
+
+.expert {
+    /* Apply your CSS styles for 'Expert' here */
+    color: red;
+    /* Other styles */
+}
+
+
