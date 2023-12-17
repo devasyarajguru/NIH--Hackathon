@@ -212,13 +212,6 @@ line-height: normal;
   height: 100%;
 }
 
-.sidebar {
-  /* Styles for the sidebar */
-  width: 5%;
-  background-color: #3f48cc;
-}
-
-
 .chat-header {
   padding: 1em;
   background-color: #ffffff; /* Set background color to white */
@@ -304,9 +297,6 @@ line-height: normal;
   overflow-x: hidden;
 }
 
-.chat-input {
-  /* Styles for the input area */
-}
 
 /* Add these styles for the new elements */
 .input-container {
@@ -348,7 +338,6 @@ input {
   cursor: pointer;
   font-size: 14px;
 }
-
 
 .sidebar
 {
@@ -413,6 +402,22 @@ input {
     transform: scale(1.05);
 }
 
+.logo
+{
+    margin: 20px;
+    margin-bottom: 50px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo svg {
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
 .query-btn
 {
   margin: 10px;
@@ -421,11 +426,12 @@ input {
 
 .query-btn button
 {
+  border-radius: 20px;
   margin-top: 20px;
   margin: 10px;
-  padding: 5px;
+  padding: 8px;
   margin-top: -10px;
-  background-color: red;
+  background-color: #4F5DFC;
   color: white;
   border: none;
 }
@@ -436,7 +442,3 @@ input {
   color: white;
 }
 
-#google-translate-element
-{
-  
-}
