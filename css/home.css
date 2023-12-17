@@ -141,7 +141,6 @@ font-style: normal;
 font-weight: 700;
 font-size: 38px;
 /* or 26px */
-font-feature-settings: 'liga' off;
 color: rgba(0, 0, 0, 0.58);
 
 }
@@ -196,9 +195,9 @@ border-radius: 24px;
 {
     text-align: center;
     font-size: 23px;
-    font-family: 'Roboto', sans-serif;
     margin-bottom: 20px;
-    font-weight: 600;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
 }
 
 .line-dot-content
@@ -269,7 +268,7 @@ border-radius: 24px;
   }
   
   .first {
-    margin-left: -40px;
+    margin-left: -80px;
     left: 1;
     width: 218px; /* Adjust the width as needed */
     background: rgba(217, 217, 217, 0.79);
@@ -295,12 +294,7 @@ border-radius: 24px;
   position: relative;
   }
 
-  .justice {
-    /* Apply your CSS styles for 'Justice' here */
-    color: blue;
-    /* Other styles */
-}
-
+ 
 .legal {
     /* Apply your CSS styles for 'Legal' here */
     color: green;
