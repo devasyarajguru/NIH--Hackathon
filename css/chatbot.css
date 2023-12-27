@@ -154,6 +154,7 @@ body
 .chat
 {
     padding: 25px 10px;
+    /* display: flex; */
 }
 
 .chat-content
@@ -201,8 +202,6 @@ body
 .chat-para.gpt
 {
     width:1000px;
-    margin: 20px;
-    margin-left: -30px;
     margin-top: 50px;
     border-radius: 20px;
     padding: 20px;
