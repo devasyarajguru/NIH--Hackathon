@@ -6,7 +6,7 @@ const chatContainer = document.querySelector('.chat-container');
 
 // Text of user
 let userText =  null;
-const API_KEY = ""
+const API_KEY = "" // API Key here
 
 const createElement = (html, className) =>
 {
@@ -17,10 +17,19 @@ const createElement = (html, className) =>
     return chatDiv; // Return the created chat div
 }
 
+// const LoadLocalStorage = () =>
+// {
+//     chatContainer.innerHTML = localStorage.getItem("all-chats");
+// } 
+
+// LoadLocalStorage();
+
 // get Chat Response
-const chatResponse = () =>
+const chatResponse = async (incomingChatDiv) =>
 {
+    // API URL
     const API_URL = 'https://api.openai.com/v1/completions';
+    const pElement = document.createElement("p");
 
     // Define the properties and data for the API request
     const requestOptions = {
@@ -39,7 +48,26 @@ const chatResponse = () =>
         })
 
     }
+
+    // Send POST request to API , get response and set the response as paragraph element text
+    try
+    {
+        const response  = await(await fetch(API_URL,requestOptions)).json();
+        console.log(response)
+        pElement.textContent = response.choices[0].text.trim();
+    }
+    catch(error)
+    {
+        console.log(error)
+    }
+
+    // Removing the typing animation , append the paragraph and save the chats to the localStorage
+    incomingChatDiv.querySelector(".typing-animation").remove()
+    incomingChatDiv.querySelector(".chat-details").appendChild(pElement)
+
+    // localStorage.setItem("all-chats" , chatContainer.innerHTML); 
 }
+
 
 // Show Typing Animation
 
@@ -58,22 +86,26 @@ const typingDotAnimation = () =>
 
 const incomingChatDiv = createElement(html,"incoming");
 chatContainer.appendChild(incomingChatDiv);
+chatResponse(incomingChatDiv);
 }
 
 // Handling Outgoing Chat
 function handleOutGoingChat()
 {
     userText = chatInput.value.trim();
+
+    if(!userText) return;
     // console.log(userText);
     const html = `<div class="chat-content">
     <div class="chat-details">
         <img src="../images/user2.png" alt="user">
-        <p>${userText}</p>
+        <p></p>
     </div>
 </div>`;
 
 // create an outgoing chat div with user's message and append it to chat container
 const OutGoingChatDiv = createElement(html, "outgoing");
+OutGoingChatDiv.querySelector("p").textContent = userText;
 chatContainer.appendChild(OutGoingChatDiv);
 setTimeout(typingDotAnimation,500)
 }
