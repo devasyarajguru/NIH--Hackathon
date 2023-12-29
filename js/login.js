@@ -2,26 +2,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('loginForm');
 
     form.addEventListener('submit', function(event) {
-        const mobileInput = document.getElementById('mobileInput');
+        const EmailInput = document.getElementById('EmailInput');
         const passwordInput = document.getElementById('passwordInput');
-        const mobileError = document.getElementById('mobileError');
+        const EmailError = document.getElementById('EmailError');
         const passwordError = document.getElementById('passwordError');
-        const email = mobileInput.value;
+        const email = EmailInput.value;
         const password = passwordInput.value;
 
         let isValid = true;
 
         // Reset previous error messages and styles
-        mobileError.textContent = '';
+        EmailError.textContent = '';
         passwordError.textContent = '';
-        mobileInput.style.border = '1px solid #ced4da';
+        EmailInput.style.border = '1px solid #ced4da';
         passwordInput.style.border = '1px solid #ced4da';
         var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
         // Mobile number validation
         if (!reg.test(email)) {
-            mobileError.textContent = 'Please enter a valid Email Address';
-            mobileInput.style.border = '1px solid red';
+            EmailError.textContent = 'Please enter a valid Email Address';
+            EmailInput.style.border = '1px solid red';
             isValid = false;
         }
 
@@ -44,14 +44,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isValid) {
         }
         else {
+            // Form Data Object creates a way to construct a set of key/value pairs reprersenting form fields and their values 
             let formData = new FormData();
+
+            // Appends new values inside a FormData object of the keys
             formData.append('username', email);
             formData.append('password', password);
 
+            // Fetch request is made to the URL using POST Method and sending formdata to server by setting the body
             fetch("http://15.206.72.47/auth/login/", {
                 method:"POST",
                 body:formData
             })
+            // --------------------------------CODE LEFT -------------------------------------------------
             .then(async response =>  {
                 const data = await response.json()
                 console.log(data);
