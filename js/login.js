@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localStorage.setItem("userType", data.user.user_type);
                 if(response.status != 400)
                 {
-                    window.location.href = "../files/home.html";
+                    window.location.href = "../files/index.html";
                 }
             })
             .catch(error =>
