@@ -30,6 +30,21 @@
     </div>
 
     
+            <!--Google Translate Element-->
+            <div id="google_translate_element"></div>
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                }
+            </script>
+
+            <!--Google Translate API-->
+            <script type="text/javascript"
+                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            <!--Google Translate Element ends-->
+
+
+    
     <!--Chat Container-->
     <div class="chat-container">
         <div class="logo"><svg  width="60" height="60" viewBox="0 0 235 232" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,8 +64,8 @@
             </filter>
             </defs>
             </svg>
-            <p class="logo-down-text top-logo">Justice</p>
-            <p class="logo-down-text-two top-logo-down">Legal Assistant</p>
+            <!-- <p class="logo-down-text top-logo">Justice</p>
+            <p class="logo-down-text-two top-logo-down">Legal Assistant</p> -->
         </div>
           
            </div>
